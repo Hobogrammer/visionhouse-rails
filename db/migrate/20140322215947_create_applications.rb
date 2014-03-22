@@ -74,7 +74,7 @@ class CreateApplications < ActiveRecord::Migration
       t.integer :number_of_prior_marriages
       t.boolean :current_significant_other
       t.string :birthplace
-      t.double :years_in_washington
+      t.decimal :years_in_washington
       t.text :reason_for_relocating
       t.string :emergency_contact_doctor_name
       t.integer :emergency_contact_doctor_phone

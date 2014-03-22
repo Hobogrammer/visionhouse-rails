@@ -1,7 +1,7 @@
 class CreateHousingHistories < ActiveRecord::Migration
   def change
     create_table :housing_histories do |t|
-      t.integer :id
+      t.integer :user_id
       t.string :address1
       t.string :address2
       t.string :city
