@@ -6,9 +6,9 @@ class CreateApplications < ActiveRecord::Migration
       t.string :middle_name
       t.string :last_name
       t.integer :age
-      t.char :gender
+      t.string :gender
       t.string :primary_language
-      t.integer :interpreter
+      t.boolean :interpreter
       t.text :address1
       t.text :address2
       t.string :city
