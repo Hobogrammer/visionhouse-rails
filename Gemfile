@@ -1,6 +1,5 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-ruby '2.1.1'
 gem 'rails', '4.0.3'
 
 gem 'better_errors'
@@ -13,6 +12,9 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'bootstrap-sass', github: "thomas-mcdonald/bootstrap-sass"
+gem 'devise'
+
 
 group :doc do
   gem 'sdoc', require: false
