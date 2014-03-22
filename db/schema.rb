@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140322192548) do
   enable_extension "plpgsql"
 
   create_table "users", force: true do |t|
-    t.string   "name"
+    t.string   "name"rge pull request #1 from Hobogramme
     t.string   "provider"
     t.integer  "uid"
     t.string   "classification"
