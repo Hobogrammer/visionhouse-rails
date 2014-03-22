@@ -1,0 +1,22 @@
+@import 'bootstrap';
+
+body{background-color: #F7F7F6;}
+.login{padding-top: 65px;}
+.center{float: none; margin-left: auto; margin-right: auto;}
+
+.navbar .brand {
+    position: img-responsive;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    margin-left: 0px;
+    padding: 10px;
+}
+
+$body-bg:                               #ecf0f1;
+$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:                         45px;
+$navbar-default-bg:                     white;
+$navbar-default-brand-color:            #c0392b;
+$brand-primary:                         #c0392b;
+$jumbotron-bg:                          white;
