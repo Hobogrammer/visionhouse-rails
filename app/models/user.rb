@@ -4,6 +4,14 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_one :application
+  has_one :child, through: :application
+  has_one :criminal_arrest, through: :application
+  has_one :employment, through: :application
+  has_one :family_member, through: :application
+  has_one :housing_history, through: :application
+  has_one :marital_status, through: :application
+
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider
