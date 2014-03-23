@@ -9,6 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap
+ *= require my_styles
  *= require_tree .
  */
 
@@ -63,3 +65,7 @@ input[type="submit"]:hover, #back:hover {
   float:left;
 }
 
+.navbar-default {
+  background-color: none !important;
+  border-color: none !important;
+}
