@@ -11,126 +11,138 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+  <div id="first">    
+      <div class="field">
+        <%= f.label :first_name %><br>
+        <%= f.text_field :first_name %>
+      </div>
+      <div class="field">
+        <%= f.label :middle_name %><br>
+        <%= f.text_field :middle_name %>
+      </div>
+      <div class="field">
+        <%= f.label :last_name %><br>
+        <%= f.number_field :last_name %>
+      </div>
+      <div class="field">
+        <%= f.label :age %><br>
+        <%= f.number_field :age, in: 1..110 %>
+      </div>
+      <div class="field">
+        <%= f.label :gender %><br>
+        <%= f.text_field :gender %>
+      </div>
+      <div class="field">
+        <%= f.label :primary_language %><br>
+        <%= f.text_field :primary_language %>
+      </div>
+      <div class="field">
+        <%= f.label :interpreter %><br>
+        <%= f.check_box :interpreter %>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :middle_name %><br>
-    <%= f.text_field :middle_name %>
+
+  <div id="second">    
+      <div class="field">
+        <%= f.label :address1 %><br>
+        <%= f.text_field :address1 %>
+      </div>
+      <div class="field">
+        <%= f.label :address2 %><br>
+        <%= f.text_field :address2 %>
+      </div>
+      <div class="field">
+        <%= f.label :city %><br>
+        <%= f.number_field :city %>
+      </div>
+      <div class="field">
+        <%= f.label :state %><br>
+        <%= f.text_field :state %>
+      </div>
+      <div class="field">
+        <%= f.label :zip_code %><br>
+        <%= f.text_field :zip_code %>
+      </div>
+      <div class="field">
+        <%= f.label :phone %><br>
+        <%= f.number_field :phone %>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.number_field :last_name %>
+
+  <div id="third">          
+      <div class="field">
+        <%= f.label :car %><br>
+        <%= f.check_box :car %>
+      </div>
+      <div class="field">
+        <%= f.label :insurance %><br>
+        <%= f.check_box :insurance %>
+      </div>
+      <div class="field">
+        <%= f.label :drivers_license %><br>
+        <%= f.text_field :drivers_license %>
+      </div>
+      <div class="field">
+        <%= f.label :drivers_license_state %><br>
+        <%= f.text_field :drivers_license_state %>
+      </div>
+      <div class="field">
+        <%= f.label :family_programs %><br>
+        <%= f.text_field :family_programs %>
+      </div>
+      <div class="field">
+        <%= f.label :shoreline_family %><br>
+        <%= f.check_box :shoreline_family %>
+      </div>
+      <div class="field">
+        <%= f.label :renton_family %><br>
+        <%= f.check_box :renton_family %>
+      </div>
+      <div class="field">
+        <%= f.label :mens_recovery %><br>
+        <%= f.check_box :mens_recovery %>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.number_field :age, in: 1..110 %>
+
+  <div id="fourth">    
+      <div class="field">
+        <%= f.label :referring_agency %><br>
+        <%= f.text_field :referring_agency %>
+      </div>
+      <div class="field">
+        <%= f.label :referring_person %><br>
+        <%= f.text_field :referring_person %>
+      </div>
+      <div class="field">
+        <%= f.label :agency_address %><br>
+        <%= f.text_field :agency_address1 %>
+      </div>
+      <div class="field">
+        <%= f.label :agency_address1 %><br>
+        <%= f.text_field :agency_address2 %>
+      </div>
+      <div class="field">
+        <%= f.label :agency_city %><br>
+        <%= f.text_field :agency_city %>
+      </div>
+      <div class="field">
+        <%= f.label :agency_state %><br>
+        <%= f.text_field :agency_state %>
+      </div>
+      <div class="field">
+        <%= f.label :agency_zip_code %><br>
+        <%= f.number_field :agency_zip_code %>
+      </div>
+      <div class="field">
+        <%= f.label :agency_phone %><br>
+        <%= f.number_field :agency_phone %>
+      </div>
+      <div class="field">
+        <%= f.label :perceived_benefit %><br>
+        <%= f.text_field :perceived_benefit %>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
-  </div>
-  <div class="field">
-    <%= f.label :primary_language %><br>
-    <%= f.text_field :primary_language %>
-  </div>
-  <div class="field">
-    <%= f.label :interpreter %><br>
-    <%= f.check_box :interpreter %>
-  </div>
-  <div class="field">
-    <%= f.label :address1 %><br>
-    <%= f.text_field :address1 %>
-  </div>
-  <div class="field">
-    <%= f.label :address2 %><br>
-    <%= f.text_field :address2 %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.number_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :zip_code %><br>
-    <%= f.text_field :zip_code %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.number_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :car %><br>
-    <%= f.check_box :car %>
-  </div>
-  <div class="field">
-    <%= f.label :insurance %><br>
-    <%= f.check_box :insurance %>
-  </div>
-  <div class="field">
-    <%= f.label :drivers_license %><br>
-    <%= f.text_field :drivers_license %>
-  </div>
-  <div class="field">
-    <%= f.label :drivers_license_state %><br>
-    <%= f.text_field :drivers_license_state %>
-  </div>
-  <div class="field">
-    <%= f.label :family_programs %><br>
-    <%= f.text_field :family_programs %>
-  </div>
-  <div class="field">
-    <%= f.label :shoreline_family %><br>
-    <%= f.check_box :shoreline_family %>
-  </div>
-  <div class="field">
-    <%= f.label :renton_family %><br>
-    <%= f.check_box :renton_family %>
-  </div>
-  <div class="field">
-    <%= f.label :mens_recovery %><br>
-    <%= f.check_box :mens_recovery %>
-  </div>
-  <div class="field">
-    <%= f.label :referring_agency %><br>
-    <%= f.text_field :referring_agency %>
-  </div>
-  <div class="field">
-    <%= f.label :referring_person %><br>
-    <%= f.text_field :referring_person %>
-  </div>
-  <div class="field">
-    <%= f.label :agency_address %><br>
-    <%= f.text_field :agency_address1 %>
-  </div>
-  <div class="field">
-    <%= f.label :agency_address1 %><br>
-    <%= f.text_field :agency_address2 %>
-  </div>
-  <div class="field">
-    <%= f.label :agency_city %><br>
-    <%= f.text_field :agency_city %>
-  </div>
-  <div class="field">
-    <%= f.label :agency_state %><br>
-    <%= f.text_field :agency_state %>
-  </div>
-  <div class="field">
-    <%= f.label :agency_zip_code %><br>
-    <%= f.number_field :agency_zip_code %>
-  </div>
-  <div class="field">
-    <%= f.label :agency_phone %><br>
-    <%= f.number_field :agency_phone %>
-  </div>
-  <div class="field">
-    <%= f.label :perceived_benefit %><br>
-    <%= f.text_field :perceived_benefit %>
-  </div>
+
   <div class="field">
     <%= f.label :alcohol_problem %><br>
     <%= f.check_box :alcohol_problem %>
