@@ -1,4 +1,4 @@
-class EmploymentController < ApplicationController
+class EmploymentsController < ApplicationController
   before_action :load_application
 
   def new

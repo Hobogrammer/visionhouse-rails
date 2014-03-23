@@ -1,16 +1,16 @@
-class CriminalArrestController < ApplicationController
+class HousingHistoriesController < ApplicationController
   before_action :load_application
 
   def new
-    @criminal_arrest = @application.criminal_arrests.build
+    @housing_history = @application.housing_histories.build
   end
 
   def create
-    @criminal_arrest = @application.criminal_arrests.create(criminal_arrest_params)
+    @housing_history = @application.housing_histories.create(housing_history_params)
 
      respond_to do |format|
       if @application.save
-        format.html { redirect_to new_application_housing_history_path(@application) }
+        format.html { redirect_to new_application_person_path(@application) }
         format.json { render action: 'show', status: :created, location: @application }
       else
         format.html { render action: 'new' }
@@ -25,7 +25,7 @@ class CriminalArrestController < ApplicationController
     @application = Application.find(params[:application_id])
   end
 
-  def criminal_arrest_params
-    params.require(:criminal_arrest).permit(:description,:month_year)
+  def housing_history_params
+
   end
 end
