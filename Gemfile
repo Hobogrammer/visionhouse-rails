@@ -17,7 +17,7 @@ gem 'bootstrap-sass', github: "thomas-mcdonald/bootstrap-sass"
 gem 'devise'
 
 group :production do
-  gem 'rails12factor'
+  gem 'rails_12factor'
 end
 
 group :doc do
