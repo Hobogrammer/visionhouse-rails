@@ -3,7 +3,7 @@ class ApplicationsController < ApplicationController
   before_action :set_application, only: [:show, :edit, :update, :destroy]
 
   def index
-    @application = Application.all
+    @applications = Application.all
   end
 
   def show
