@@ -11,7 +11,7 @@
   <!-- </div> -->
     <%#= image_tag "Headshot.png", class: "brand" %>
 
-  <% if user_signed_in? %>
+  <% if current_user %>
   <%= link_to(image_tag("/assets/logo.png", class: "brand"), "/") %>
   </div>
   <% else %>
@@ -25,13 +25,14 @@
 
   <ul class="nav navbar-nav navbar-right">
 
-    <% if user_signed_in? %>
-    <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-    <li><%= link_to "", edit_user_registration_path, class: "glyphicon glyphicon-user" %></li>
-     <% else %>
-       <li><%= link_to('Sign In', new_user_session_path)  %></li>
+   <% if current_user %>
+      <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+      <li><%= link_to "", edit_user_registration_path, class: "glyphicon glyphicon-user" %></li>
+    <% else %>
+      <li><%= link_to('Sign In', new_user_session_path)  %></li>
       <li><%= link_to "Sign Up", new_user_registration_path %></li>
   <% end %>
+
 </nav>
 
 <div class="container">
