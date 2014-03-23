@@ -4,6 +4,7 @@ gem 'rails', '4.0.3'
 
 gem 'better_errors'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'figaro'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'omniauth'
