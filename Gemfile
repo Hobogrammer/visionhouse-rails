@@ -16,6 +16,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap-sass', github: "thomas-mcdonald/bootstrap-sass"
 gem 'devise'
 
+group :production do
+  gem 'rails12factor'
+end
 
 group :doc do
   gem 'sdoc', require: false
