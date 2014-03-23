@@ -2,21 +2,21 @@ class SubjectsController < ApplicationController
 before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
   def index
-    @subjects = subject.all
+    @subjects = Subject.all
   end
 
   def show
   end
 
   def new
-    @subject = subject.new
+    @subject = Subject.new
   end
 
   def edit
   end
 
   def create
-    @subject = subject.new(subject_params)
+    @subject = Subject.new(subject_params)
 
     respond_to do |format|
       if @subject.save
@@ -52,10 +52,10 @@ before_action :set_subject, only: [:show, :edit, :update, :destroy]
   private
 
     def set_subject
-      @subject = subject.find(params[:id])
+      @subject = Subject.find(params[:id])
     end
 
     def subject_params
-      params.require(:subject).permit(:name, :provider, :uid, :classification)
+      params.require(:subject).permit(:first_name,:last_name,:middle_name)
     end
 end

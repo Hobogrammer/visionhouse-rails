@@ -1,7 +1,6 @@
 VisionhouseRails::Application.routes.draw do
-  resources :subjects
-
   devise_for :users
+  resources :subjects
   resources :applications
 
   get '/' , to: 'view_pages#index'
@@ -10,7 +9,5 @@ VisionhouseRails::Application.routes.draw do
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
-  devise_scope :user do
-    get '/application', to: 'devise/registrations#new'
-  end
+  get '/application', to: 'subjects#new'
 end
