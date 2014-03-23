@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140322224802) do
+ActiveRecord::Schema.define(version: 20140323033742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,7 +113,6 @@ ActiveRecord::Schema.define(version: 20140322224802) do
   end
 
   create_table "children", force: true do |t|
-    t.integer  "user_id"
     t.string   "first_name"
     t.string   "last_name"
     t.datetime "date_of_birth"
@@ -125,18 +124,18 @@ ActiveRecord::Schema.define(version: 20140322224802) do
     t.string   "person_with_custody_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "application_id"
   end
 
   create_table "criminal_arrests", force: true do |t|
-    t.integer  "user_id"
     t.text     "description"
     t.datetime "month_year"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "application_id"
   end
 
   create_table "employments", force: true do |t|
-    t.integer  "user_id"
     t.string   "employer_name"
     t.string   "employer_address1"
     t.string   "employer_address2"
@@ -151,10 +150,10 @@ ActiveRecord::Schema.define(version: 20140322224802) do
     t.text     "reason_for_leaving"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "application_id"
   end
 
   create_table "family_members", force: true do |t|
-    t.integer  "user_id"
     t.string   "relationship"
     t.string   "name"
     t.string   "address1"
@@ -167,10 +166,10 @@ ActiveRecord::Schema.define(version: 20140322224802) do
     t.string   "family_member_col"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "application_id"
   end
 
   create_table "housing_histories", force: true do |t|
-    t.integer  "user_id"
     t.string   "address1"
     t.string   "address2"
     t.string   "city"
@@ -181,13 +180,32 @@ ActiveRecord::Schema.define(version: 20140322224802) do
     t.text     "reason_for_leaving"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "application_id"
+  end
+
+  create_table "people", force: true do |t|
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
+    t.string   "relationship"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "application_id"
+  end
+
+  create_table "subjects", force: true do |t|
+    t.string   "provider"
+    t.integer  "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "provider"
-    t.integer  "uid"
-    t.string   "classification"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email",                  default: "", null: false
@@ -200,13 +218,6 @@ ActiveRecord::Schema.define(version: 20140322224802) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "oauth_token"
-    t.datetime "oauth_expires_at"
-    t.string   "first_name"
-    t.string   "middle_name"
-    t.string   "last_name"
-    t.integer  "user_id"
-    t.string   "relationship"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -1,4 +1,4 @@
-<%= form_for(@application) do |f| %>
+<%= form_for([@subject,@application]) do |f| %>
   <% if @application.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
@@ -40,7 +40,107 @@
         <%= f.label :interpreter %><br>
         <%= f.check_box :interpreter %>
       </div>
+  </div>      
+
+  <div id="second"> 
+      <!-- Residence -->
+      <div class="field">
+        <%= f.label :first_name %><br>
+        <%= @subject.first_name %>
+      </div>
+      <div class="field">
+        <%= f.label :middle_name %><br>
+        <%= @subject.middle_name %>
+      </div>
+      <div class="field">
+        <%= f.label :last_name %><br>
+        <%= @subject.last_name %>
+      </div>
+      <div class="field">
+        <%= f.label :age %><br>
+        <%= f.number_field :age, in: 1..110 %>
+      </div>
+      <div class="field">
+        <%= f.label :gender %><br>
+        <%= f.text_field :gender %>
+      </div>
+      <div class="field">
+        <%= f.label :primary_language %><br>
+        <%= f.text_field :primary_language %>
+      </div><br>
+      <div class="field">
+        <%= f.label :interpreter %>
+        <%= f.check_box :interpreter %>
+      </div><br>
+      <div class="field">
+        <%= f.label :address_1 %><br>
+        <%= f.text_field :address1 %>
+      </div>
+      <div class="field">
+        <%= f.label :address_2 %><br>
+        <%= f.text_field :address2 %>
+      </div>
+      <div class="field">
+        <%= f.label :city %><br>
+        <%= f.number_field :city %>
+      </div>
+      <div class="field">
+        <%= f.label :state %><br>
+        <%= f.text_field :state %>
+      </div>
+      <div class="field">
+        <%= f.label :zip_code %><br>
+        <%= f.text_field :zip_code %>
+      </div>
+      <div class="field">
+        <%= f.label :phone %><br>
+        <%= f.number_field :phone %>
+      </div>
   </div>
+
+
+      <br>
+      <div class="field">
+        <%= f.label :car %>
+        <%= f.check_box :car %>
+      </div><br>
+      <div class="field">
+        <%= f.label :insurance %>
+        <%= f.check_box :insurance %>
+      </div><br>
+      <div class="field">
+        <%= f.label :drivers_license %><br>
+        <%= f.text_field :drivers_license %>
+      </div>
+      <div class="field">
+        <%= f.label :drivers_license_state %><br>
+        <%= f.text_field :drivers_license_state %>
+      </div>
+      <div class="field">
+        <%= f.label :family_programs %><br>
+        <%= f.text_field :family_programs %>
+      </div><br>
+      <div class="field">
+        <%= f.label :shoreline_family %>
+        <%= f.check_box :shoreline_family %>
+      </div><br>
+      <div class="field">
+        <%= f.label :renton_family %>
+        <%= f.check_box :renton_family %>
+      </div><br>
+      <div class="field">
+        <%= f.label :mens_recovery %>
+        <%= f.check_box :mens_recovery %>
+      </div><br>
+      <div class="field">
+        <%= f.label :referring_agency %><br>
+        <%= f.text_field :referring_agency %>
+      </div>
+      <div class="field">
+        <%= f.label :referring_person %><br>
+        <%= f.text_field :referring_person %>
+      </div>
+  
 
   <div id="second">    
       <div class="field">
@@ -103,6 +203,7 @@
         <%= f.check_box :mens_recovery %>
       </div>
   </div>
+<<<<<<< HEAD
 
   <div id="fourth">    
       <div class="field">
@@ -141,16 +242,60 @@
         <%= f.label :perceived_benefit %><br>
         <%= f.text_field :perceived_benefit %>
       </div>
+=======
+  <!-- End Residence -->
+
+
+  <!-- Children -->
+  <div class="field">
+    <%= f.label :perceived_benefit %><br>
+    <%= f.text_field :perceived_benefit %>
+>>>>>>> 23f66837913f13dad80cb7b87de794c453ca82db
   </div>
 
   <div class="field">
-    <%= f.label :alcohol_problem %><br>
-    <%= f.check_box :alcohol_problem %>
+    <%= f.label :date_of_birth %><br>
+    <%= f.date_field :date_of_birth %>
   </div>
   <div class="field">
-    <%= f.label :drug_problem %><br>
-    <%= f.check_box :drug_problem %>
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
   </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :legal_guardian_first_name %><br>
+    <%= f.text_field :legal_guardian_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label  :legal_guardian_last_name %><br>
+    <%= f.text_field :legal_guardian_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :legal_guardian_gender %><br>
+    <%= f.text_field :legal_guardian_gender %>
+  </div>
+  <div class="field">
+    <%= f.label :person_with_custody_name %><br>
+    <%= f.text_field :person_with_custody_name %>
+  </div>
+  <!-- End Children -->
+
+
+
+
+
+  <!-- Drug History -->
+  <div class="field">
+    <%= f.label :alcohol_problem %>
+    <%= f.check_box :alcohol_problem %>
+  </div><br>
+  <div class="field">
+    <%= f.label :drug_problem %>
+    <%= f.check_box :drug_problem %>
+  </div><br>
   <div class="field">
     <%= f.label :sober_days %><br>
     <%= f.number_field :sober_days %>
@@ -170,15 +315,21 @@
   <div class="field">
     <%= f.label :last_treatment_date %><br>
     <%= f.date_field :last_treatment_date %>
-  </div>
+  </div><br>
   <div class="field">
-    <%= f.label :currently_in_twelve_step %><br>
+    <%= f.label :currently_in_twelve_step %>
     <%= f.check_box :currently_in_twelve_step %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :changes_to_ensure_sobriety %><br>
     <%= f.text_field :changes_to_ensure_sobriety %>
   </div>
+  <!-- End Drug History -->
+
+
+
+
+  <!-- Health -->
   <div class="field">
     <%= f.label :history_serious_illness %><br>
     <%= f.text_field :history_serious_illness %>
@@ -194,11 +345,11 @@
   <div class="field">
     <%= f.label :non_prescription_drugs_explanation %><br>
     <%= f.text_field :non_prescription_drugs_explanation %>
-  </div>
+  </div><br>
   <div class="field">
-    <%= f.label :have_been_in_counseling %><br>
+    <%= f.label :have_been_in_counseling %>
     <%= f.check_box :have_been_in_counseling %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :counseling_date %><br>
     <%= f.date_field :counseling_date %>
@@ -210,11 +361,11 @@
   <div class="field">
     <%= f.label :counseling_issues%><br>
     <%= f.text_field :counseling_issues %>
-  </div>
+  </div><br>
   <div class="field">
-    <%= f.label :attempted_suicide %><br>
+    <%= f.label :attempted_suicide %>
     <%= f.check_box :attempted_suicide %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :attempted_suicide_date %><br>
     <%= f.date_field :attempted_suicide_date %>
@@ -222,19 +373,24 @@
   <div class="field">
     <%= f.label :attempted_suicide_method %><br>
     <%= f.text_field :attempted_suicide_method %>
-  </div>
+  </div><br>
+  <!-- End Health -->
+
+
+
+  <!-- Criminal History -->
   <div class="field">
-    <%= f.label :pending_charges_or_warrants %><br>
+    <%= f.label :pending_charges_or_warrants %>
     <%= f.check_box :pending_charges_or_warrants %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :pending_charges_or_warrants_description %><br>
     <%= f.text_field :pending_charges_or_warrants_description %>
-  </div>
+  </div><br>
   <div class="field">
-    <%= f.label :probation_or_parole %><br>
+    <%= f.label :probation_or_parole %>
     <%= f.check_box :probation_or_parole %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :probation_officer_first_name %><br>
     <%= f.text_field :probation_officer_first_name %>
@@ -247,14 +403,19 @@
     <%= f.label :probation_officer_phone %><br>
     <%= f.number_field :probation_officer_phone %>
   </div>
+  <!-- End Criminal History -->
+
+
+
+  <!-- Education -->
   <div class="field">
     <%= f.label :highest_grade_completed %><br>
     <%= f.number_field :highest_grade_completed %>
-  </div>
+  </div><br>
   <div class="field">
-    <%= f.label :diploma %><br>
+    <%= f.label :diploma %>
     <%= f.check_box :diploma %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :diploma_school %><br>
     <%= f.text_field :diploma_school %>
@@ -262,15 +423,20 @@
   <div class="field">
     <%= f.label :diploma_date %><br>
     <%= f.date_field :diploma_date %>
-  </div>
+  </div><br>
   <div class="field">
-    <%= f.label :GED %><br>
+    <%= f.label :GED %>
     <%= f.check_box :GED %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :GED_date %><br>
     <%= f.date_field :GED_date %>
   </div>
+  <!-- End Education -->
+
+
+
+  <!-- Employment -->
   <div class="field">
     <%= f.label :gross_income_YTD %><br>
     <%= f.number_field :gross_income_YTD, :step => 'any' %>
@@ -280,13 +446,18 @@
     <%= f.text_field :gross_income_previous_year, :step => 'any' %>
   </div>
   <div class="field">
-    <%= f.label :goals_for_year%><br>
+    <%= f.label :goals_for_year %><br>
     <%= f.text_field :goals_for_year %>
   </div>
   <div class="field">
     <%= f.label :financial_support_plan %><br>
     <%= f.text_field :financial_support_plan %>
   </div>
+  <!-- End Employment -->
+
+
+
+  <!-- Marital Status -->
   <div class="field">
     <%= f.label :married_date %><br>
     <%= f.date_field :married_date %>
@@ -302,11 +473,16 @@
   <div class="field">
     <%= f.label :number_of_prior_marriages %><br>
     <%= f.text_field :number_of_prior_marriages, in: 1..100 %>
-  </div>
+  </div><br>
   <div class="field">
-    <%= f.label :current_significant_other %><br>
+    <%= f.label :current_significant_other %>
     <%= f.check_box :current_significant_other %>
-  </div>
+  </div><br>
+  <!-- End Marital Status -->
+
+
+
+  <!-- Residence -->
   <div class="field">
     <%= f.label :birthplace %><br>
     <%= f.text_field :birthplace %>
@@ -319,6 +495,11 @@
     <%= f.label :reason_for_relocating %><br>
     <%= f.text_field :reason_for_relocating %>
   </div>
+  <!-- End Residence -->
+
+
+
+  <!-- Family -->
   <div class="field">
     <%= f.label :emergency_contact_doctor_name %><br>
     <%= f.text_field :emergency_contact_doctor_name %>
@@ -350,15 +531,25 @@
   <div class="field">
     <%= f.label :medical_insurance_group_number %><br>
     <%= f.number_field :medical_insurance_group_number %>
-  </div>
+  </div><br>
+  <!-- End Family -->
+
+
+
+  <!-- Military -->
   <div class="field">
-    <%= f.label :military_service %><br>
+    <%= f.label :military_service %>
     <%= f.check_box :military_service %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :military_service_description %><br>
     <%= f.text_field :military_service_description %>
   </div>
+  <!-- End Military -->
+
+
+
+  <!-- Home Record  -->
   <div class="field">
     <%= f.label :home_record_address %><br>
     <%= f.text_field :home_record_address1 %>
@@ -383,6 +574,9 @@
     <%= f.label :home_record_phone %><br>
     <%= f.number_field :home_record_phone %>
   </div>
+  <!-- End Home Record -->
+
+
 
   <div class="actions">
     <%= f.submit %>
