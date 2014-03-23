@@ -1,0 +1,378 @@
+<%= form_for(@application) do |f| %>
+  <% if @application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+      <ul>
+      <% @application.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %><br>
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.number_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age, in: 1..110 %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :primary_language %><br>
+    <%= f.text_field :primary_language %>
+  </div>
+  <div class="field">
+    <%= f.label :interpreter %><br>
+    <%= f.check_box :interpreter %>
+  </div>
+  <div class="field">
+    <%= f.label :address1 %><br>
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %><br>
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.number_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip_code %><br>
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.number_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :car %><br>
+    <%= f.check_box :car %>
+  </div>
+  <div class="field">
+    <%= f.label :insurance %><br>
+    <%= f.check_box :insurance %>
+  </div>
+  <div class="field">
+    <%= f.label :drivers_license %><br>
+    <%= f.text_field :drivers_license %>
+  </div>
+  <div class="field">
+    <%= f.label :drivers_license_state %><br>
+    <%= f.text_field :drivers_license_state %>
+  </div>
+  <div class="field">
+    <%= f.label :family_programs %><br>
+    <%= f.text_field :family_programs %>
+  </div>
+  <div class="field">
+    <%= f.label :shoreline_family %><br>
+    <%= f.check_box :shoreline_family %>
+  </div>
+  <div class="field">
+    <%= f.label :renton_family %><br>
+    <%= f.check_box :renton_family %>
+  </div>
+  <div class="field">
+    <%= f.label :mens_recovery %><br>
+    <%= f.check_box :mens_recovery %>
+  </div>
+  <div class="field">
+    <%= f.label :referring_agency %><br>
+    <%= f.text_field :referring_agency %>
+  </div>
+  <div class="field">
+    <%= f.label :referring_person %><br>
+    <%= f.text_field :referring_person %>
+  </div>
+  <div class="field">
+    <%= f.label :agency_address %><br>
+    <%= f.text_field :agency_address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :agency_address1 %><br>
+    <%= f.text_field :agency_address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :agency_city %><br>
+    <%= f.text_field :agency_city %>
+  </div>
+  <div class="field">
+    <%= f.label :agency_state %><br>
+    <%= f.text_field :agency_state %>
+  </div>
+  <div class="field">
+    <%= f.label :agency_zip_code %><br>
+    <%= f.number_field :agency_zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :agency_phone %><br>
+    <%= f.number_field :agency_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :perceived_benefit %><br>
+    <%= f.text_field :perceived_benefit %>
+  </div>
+  <div class="field">
+    <%= f.label :alcohol_problem %><br>
+    <%= f.check_box :alcohol_problem %>
+  </div>
+  <div class="field">
+    <%= f.label :drug_problem %><br>
+    <%= f.check_box :drug_problem %>
+  </div>
+  <div class="field">
+    <%= f.label :sober_days %><br>
+    <%= f.number_field :sober_days %>
+  </div>
+  <div class="field">
+    <%= f.label :sober_months %><br>
+    <%= f.number_field :sober_months %>
+  </div>
+  <div class="field">
+    <%= f.label :sober_years %><br>
+    <%= f.number_field :sober_years %>
+  </div>
+  <div class="field">
+    <%= f.label :times_in_treatment %><br>
+    <%= f.number_field :times_in_treatment %>
+  </div>
+  <div class="field">
+    <%= f.label :last_treatment_date %><br>
+    <%= f.date_field :last_treatment_date %>
+  </div>
+  <div class="field">
+    <%= f.label :currently_in_twelve_step %><br>
+    <%= f.check_box :currently_in_twelve_step %>
+  </div>
+  <div class="field">
+    <%= f.label :changes_to_ensure_sobriety %><br>
+    <%= f.text_field :changes_to_ensure_sobriety %>
+  </div>
+  <div class="field">
+    <%= f.label :history_serious_illness %><br>
+    <%= f.text_field :history_serious_illness %>
+  </div>
+  <div class="field">
+    <%= f.label :medical_problem_and_medication %><br>
+    <%= f.text_field :medical_problem_and_medication %>
+  </div>
+  <div class="field">
+    <%= f.label :non_prescription_drugs %><br>
+    <%= f.text_field :non_prescription_drugs %>
+  </div>
+  <div class="field">
+    <%= f.label :non_prescription_drugs_explanation %><br>
+    <%= f.text_field :non_prescription_drugs_explanation %>
+  </div>
+  <div class="field">
+    <%= f.label :have_been_in_counseling %><br>
+    <%= f.check_box :have_been_in_counseling %>
+  </div>
+  <div class="field">
+    <%= f.label :counseling_date %><br>
+    <%= f.date_field :counseling_date %>
+  </div>
+  <div class="field">
+    <%= f.label :counseling_location %><br>
+    <%= f.text_field :counseling_location %>
+  </div>
+  <div class="field">
+    <%= f.label :counseling_issues%><br>
+    <%= f.text_field :counseling_issues %>
+  </div>
+  <div class="field">
+    <%= f.label :attempted_suicide %><br>
+    <%= f.check_box :attempted_suicide %>
+  </div>
+  <div class="field">
+    <%= f.label :attempted_suicide_date %><br>
+    <%= f.date_field :attempted_suicide_date %>
+  </div>
+  <div class="field">
+    <%= f.label :attempted_suicide_method %><br>
+    <%= f.text_field :attempted_suicide_method %>
+  </div>
+  <div class="field">
+    <%= f.label :pending_charges_or_warrants %><br>
+    <%= f.check_box :pending_charges_or_warrants %>
+  </div>
+  <div class="field">
+    <%= f.label :pending_charges_or_warrants_description %><br>
+    <%= f.text_field :pending_charges_or_warrants_description %>
+  </div>
+  <div class="field">
+    <%= f.label :probation_or_parole %><br>
+    <%= f.check_box :probation_or_parole %>
+  </div>
+  <div class="field">
+    <%= f.label :probation_officer_first_name %><br>
+    <%= f.text_field :probation_officer_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :probation_officer_last_name %><br>
+    <%= f.text_field :probation_officer_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :probation_officer_phone %><br>
+    <%= f.number_field :probation_officer_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :highest_grade_completed %><br>
+    <%= f.number_field :highest_grade_completed %>
+  </div>
+  <div class="field">
+    <%= f.label :diploma %><br>
+    <%= f.check_box :diploma %>
+  </div>
+  <div class="field">
+    <%= f.label :diploma_school %><br>
+    <%= f.text_field :diploma_school %>
+  </div>
+  <div class="field">
+    <%= f.label :diploma_date %><br>
+    <%= f.date_field :diploma_date %>
+  </div>
+  <div class="field">
+    <%= f.label :GED %><br>
+    <%= f.check_box :GED %>
+  </div>
+  <div class="field">
+    <%= f.label :GED_date %><br>
+    <%= f.date_field :GED_date %>
+  </div>
+  <div class="field">
+    <%= f.label :gross_income_YTD %><br>
+    <%= f.number_field :gross_income_YTD, :step => 'any' %>
+  </div>
+  <div class="field">
+    <%= f.label :gross_income_previous_year %><br>
+    <%= f.text_field :gross_income_previous_year, :step => 'any' %>
+  </div>
+  <div class="field">
+    <%= f.label :goals_for_year%><br>
+    <%= f.text_field :goals_for_year %>
+  </div>
+  <div class="field">
+    <%= f.label :financial_support_plan %><br>
+    <%= f.text_field :financial_support_plan %>
+  </div>
+  <div class="field">
+    <%= f.label :married_date %><br>
+    <%= f.date_field :married_date %>
+  </div>
+  <div class="field">
+    <%= f.label :divorced_date %><br>
+    <%= f.date_field :divorced_date %>
+  </div>
+  <div class="field">
+    <%= f.label :age_at_first_married %><br>
+    <%= f.number_field :age_at_first_married, in: 1..100 %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_prior_marriages %><br>
+    <%= f.text_field :number_of_prior_marriages, in: 1..100 %>
+  </div>
+  <div class="field">
+    <%= f.label :current_significant_other %><br>
+    <%= f.check_box :current_significant_other %>
+  </div>
+  <div class="field">
+    <%= f.label :birthplace %><br>
+    <%= f.text_field :birthplace %>
+  </div>
+  <div class="field">
+    <%= f.label :years_in_washington %><br>
+    <%= f.number_field :years_in_washington, :step => 'any' %>
+  </div>
+  <div class="field">
+    <%= f.label :reason_for_relocating %><br>
+    <%= f.text_field :reason_for_relocating %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_doctor_name %><br>
+    <%= f.text_field :emergency_contact_doctor_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_doctor_phone %><br>
+    <%= f.number_field :emergency_contact_doctor_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_hospital_name %><br>
+    <%= f.text_field :emergency_contact_hospital_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_hospital_phone %><br>
+    <%= f.number_field :emergency_contact_hospital_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_friend_or_relative_name %><br>
+    <%= f.text_field :emergency_contact_friend_or_relative_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_friend_or_relative_phone %><br>
+    <%= f.number_field :emergency_contact_friend_or_relative_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :medical_insurance_name %><br>
+    <%= f.text_field :medical_insurance_name %>
+  </div>
+  <div class="field">
+    <%= f.label :medical_insurance_group_number %><br>
+    <%= f.number_field :medical_insurance_group_number %>
+  </div>
+  <div class="field">
+    <%= f.label :military_service %><br>
+    <%= f.check_box :military_service %>
+  </div>
+  <div class="field">
+    <%= f.label :military_service_description %><br>
+    <%= f.text_field :military_service_description %>
+  </div>
+  <div class="field">
+    <%= f.label :home_record_address %><br>
+    <%= f.text_field :home_record_address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :home_record_address %><br>
+    <%= f.text_field :home_record_address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :home_record_city %><br>
+    <%= f.text_field :home_record_city %>
+  </div>
+  <div class="field">
+    <%= f.label :home_record_state %><br>
+    <%= f.text_field :home_record_state %>
+  </div>
+  <div class="field">
+    <%= f.label :home_record_zip_code %><br>
+    <%= f.number_field :home_record_zip_code %>
+  </div>
+   <div class="field">
+    <%= f.label :home_record_phone %><br>
+    <%= f.number_field :home_record_phone %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

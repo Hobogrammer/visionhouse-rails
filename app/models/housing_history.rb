@@ -1,3 +1,3 @@
 class HousingHistory < ActiveRecord::Base
-  belongs_to user through: :application
+  has_one :user, through: :application
 end

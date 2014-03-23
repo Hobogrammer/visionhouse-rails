@@ -5,12 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :application
-  has_one :child, through: :application
-  has_one :criminal_arrest, through: :application
-  has_one :employment, through: :application
-  has_one :family_member, through: :application
-  has_one :housing_history, through: :application
-  has_one :marital_status, through: :application
+  has_many :children, through: :application
+  has_many :criminal_arrest, through: :application
+  has_many :employment, through: :application
+  has_many :family_member, through: :application
+  has_many :housing_history, through: :application
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
