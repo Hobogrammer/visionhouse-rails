@@ -6,6 +6,11 @@ VisionhouseRails::Application.routes.draw do
 
   resources :applications do
     resources :children
+    resources :criminal_arrests
+    resources :family_members
+    resources :employments
+    resources :housing_histories
+    resources :people
   end
   get '/' , to: 'view_pages#index'
 

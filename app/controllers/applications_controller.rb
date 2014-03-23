@@ -18,7 +18,7 @@ class ApplicationsController < ApplicationController
   end
 
   def create
-    @application = @subject.application.new(application_params)
+    @application = @subject.build_application(application_params)
 
     respond_to do |format|
       if @application.save
