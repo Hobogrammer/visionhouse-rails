@@ -12,6 +12,10 @@
  *= require_tree .
  */
 
+input {
+    width: 414px;
+}
+
 .container {
   text-align:center;
 }
@@ -26,8 +30,15 @@ body {
   background-color: #fad36b !important;
 }
 
-input[type="submit"], a {
-  width: 414px;
+a {
+  color: #81c2d5 !important;
+}
+
+a:hover {
+  text-decoration:none !important;
+}
+
+input[type="submit"], #back {
   text-transform: uppercase;
   border: 2px solid #81c2d5;
   color: #81c2d5;
@@ -40,9 +51,15 @@ input[type="submit"], a {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   font-weight: 700;
+  width: 414px;
 }
 
-input[type="submit"]:hover, a:hover {
+input[type="submit"]:hover, #back:hover {
   background: #ffffff;
   color: #81c2d5;
 }
+#application_interpreter, #application_car, #application_insurance, #application_shoreline_family, #application_renton_family, #application_mens_recovery, #application_alcohol_problem, #application_drug_problem, #application_currently_in_twelve_step, #application_have_been_in_counseling, #application_attempted_suicide, #application_pending_charges_or_warrants, #application_probation_or_parole, #application_diploma, #application_GED, #application_current_significant_other, #application_military_service {
+  position:absolute;
+  float:left;
+}
+
