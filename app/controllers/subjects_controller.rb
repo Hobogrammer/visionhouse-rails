@@ -20,7 +20,7 @@ before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
     respond_to do |format|
       if @subject.save
-        format.html { redirect_to new_application_path(@subject) }
+        format.html { redirect_to new_subject_application_path(@subject) }
         format.json { render action: 'show', status: :created, location: @subject }
       else
         format.html { render action: 'new' }
