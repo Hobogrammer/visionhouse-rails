@@ -82,10 +82,6 @@
     <%= f.text_field :drivers_license_state %>
   </div>
   <div class="field">
-    <%= f.label :family_programs %><br>
-    <%= f.text_field :family_programs %>
-  </div><br>
-  <div class="field">
     <%= f.label :shoreline_family %>
     <%= f.check_box :shoreline_family %>
   </div><br>
@@ -131,47 +127,20 @@
   </div>
   <!-- End Residence -->
 
-
+<div class="field">
+  <%= f.label :perceived_benefit %><br>
+  <%= f.text_field :perceived_benefit %>
+</div><br>
+<div class="field">
+  <%= f.label :alcohol_problem %>
+  <%= f.check_box :alcohol_problem %>
+</div><br>
+<div class="field">
+  <%= f.label :drug_problem %>
+  <%= f.check_box :drug_problem %>
+</div><br>
   <!-- Children -->
-  <div class="field">
-    <%= f.label :perceived_benefit %><br>
-    <%= f.text_field :perceived_benefit %>
-  </div><br>
-  <div class="field">
-    <%= f.label :alcohol_problem %>
-    <%= f.check_box :alcohol_problem %>
-  </div><br>
-  <div class="field">
-    <%= f.label :drug_problem %>
-    <%= f.check_box :drug_problem %>
-  </div><br>
-    <%= f.label :date_of_birth %><br>
-    <%= f.date_field :date_of_birth %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
-  </div>
-  <div class="field">
-    <%= f.label :legal_guardian_first_name %><br>
-    <%= f.text_field :legal_guardian_first_name %>
-  </div>
-  <div class="field">
-    <%= f.label  :legal_guardian_last_name %><br>
-    <%= f.text_field :legal_guardian_last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :legal_guardian_gender %><br>
-    <%= f.text_field :legal_guardian_gender %>
-  </div>
-  <div class="field">
-    <%= f.label :person_with_custody_name %><br>
-    <%= f.text_field :person_with_custody_name %>
-  </div>
+<%= render 'child/form' %>
   <!-- End Children -->
 
 

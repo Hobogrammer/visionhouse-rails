@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140323065638) do
+ActiveRecord::Schema.define(version: 20140323071947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -146,7 +146,6 @@ ActiveRecord::Schema.define(version: 20140323065638) do
     t.string   "occupation"
     t.datetime "start_month_year"
     t.datetime "end_month_year"
-    t.datetime "end_month_year1"
     t.text     "reason_for_leaving"
     t.datetime "created_at"
     t.datetime "updated_at"
