@@ -15,15 +15,15 @@
   <!-- Residence -->
   <div class="field">
     <%= f.label :first_name %><br>
-    <%= @subject.first_name %>
+    <%= f.text_field :first_name, :value => @subject.first_name %>
   </div>
   <div class="field">
     <%= f.label :middle_name %><br>
-    <%= @subject.middle_name %>
+    <%= f.text_field :middle_name, :value => @subject.middle_name %>
   </div>
   <div class="field">
     <%= f.label :last_name %><br>
-    <%= @subject.last_name %>
+    <%= f.text_field :last_name, :value => @subject.last_name %>
   </div>
   <div class="field">
     <%= f.label :age %><br>

@@ -7,7 +7,8 @@ class ApplicationsController < ApplicationController
   end
 
   def show
-    @application = Application.includes(:children,:family_members,:criminal_arrests,:employments,:housing_histories,:people, :subject).find(params[:id])
+    @application = Application.find(params[:id])
+    binding.pry
   end
 
   def new
