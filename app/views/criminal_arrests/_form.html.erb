@@ -1,3 +1,16 @@
+<%= form_for([@application,@criminal_arrest]) do |f| %>
+  <% if @application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+      <ul>
+      <% @application.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 <div class="field">
     <%= f.label :pending_charges_or_warrants %><br>
     <%= f.check_box :pending_charges_or_warrants %>
@@ -22,3 +35,4 @@
     <%= f.label :probation_officer_phone %><br>
     <%= f.number_field :probation_officer_phone %>
   </div>
+<% end %>
