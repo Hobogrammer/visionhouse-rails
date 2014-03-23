@@ -16,6 +16,6 @@ class CriminalArrestController < ApplicationController
   end
 
   def criminal_arrest_params
-
+    params.require(:criminal_arrest).permit(:description,:month_year)
   end
 end

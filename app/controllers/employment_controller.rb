@@ -16,7 +16,7 @@ class EmploymentController < ApplicationController
   end
 
   def employment_params
-
+    params.require(:employment).permit(:employer_name,:employer_address1, :employer_address2, :employer_city, :employer_state, :employer_zip_code, :employer_phone,:occupation,:start_month_year,:end_month_year,:reason_for_leaving)
   end
 end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140323033742) do
+ActiveRecord::Schema.define(version: 20140323065638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20140323033742) do
     t.boolean  "insurance"
     t.string   "drivers_license"
     t.string   "drivers_license_state"
-    t.string   "family_programs"
     t.boolean  "shoreline_family"
     t.boolean  "renton_family"
     t.boolean  "mens_recovery"
@@ -110,6 +109,7 @@ ActiveRecord::Schema.define(version: 20140323033742) do
     t.integer  "home_record_phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "date_of_birth"
   end
 
   create_table "children", force: true do |t|

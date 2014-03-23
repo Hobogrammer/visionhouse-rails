@@ -16,6 +16,6 @@ class FamilyMemberController < ApplicationController
   end
 
   def family_member_params
-
+    params.require(:family_member).permit(:relationship,:name, :address1, :address2, :city, :state,:zip_code,:phone,:supportive_of_you, :family_member_col)
   end
 end
