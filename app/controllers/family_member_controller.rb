@@ -7,6 +7,16 @@ class FamilyMemberController < ApplicationController
 
   def create
     @family_member = @application.family_members.create(family_member_params)
+
+     respond_to do |format|
+      if @family_member.save
+        format.html { redirect_to new_application_child(@application) }
+        format.json { render action: 'show', status: :created, location: @family_member }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @family_member.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private

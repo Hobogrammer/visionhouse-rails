@@ -22,7 +22,7 @@ class ApplicationsController < ApplicationController
 
     respond_to do |format|
       if @application.save
-        format.html { redirect_to @application, notice: 'Application was successfully created.' }
+        format.html { redirect_to new_application_family_member_path(@application) }
         format.json { render action: 'show', status: :created, location: @application }
       else
         format.html { render action: 'new' }

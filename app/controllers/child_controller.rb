@@ -7,6 +7,16 @@ class ChildController < ApplicationController
 
   def create
     @child = @application.children.new(child_params)
+
+     respond_to do |format|
+      if @child.save
+        format.html { redirect_to new_application_employment_path(@application) }
+        format.json { render action: 'show', status: :created, location: @application }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @child.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private

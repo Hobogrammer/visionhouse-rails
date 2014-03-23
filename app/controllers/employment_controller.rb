@@ -7,6 +7,16 @@ class EmploymentController < ApplicationController
 
   def create
     @employment = @application.employments.create(employment_params)
+
+     respond_to do |format|
+      if @application.save
+        format.html { redirect_to new_application_criminal_arrest_path(@application) }
+        format.json { render action: 'show', status: :created, location: @employment }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @employment.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private

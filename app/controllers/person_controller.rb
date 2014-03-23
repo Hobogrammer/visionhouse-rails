@@ -7,6 +7,16 @@ class PersonController < ApplicationController
 
   def create
     @person = @application.people.create(person_params)
+
+     respond_to do |format|
+      if @application.save
+        format.html { redirect_to new_application_family_member(@application) }
+        format.json { render action: 'show', status: :created, location: @application }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @application.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private

@@ -7,6 +7,16 @@ class HousingHistoryController < ApplicationController
 
   def create
     @housing_history = @application.housing_histories.create(housing_history_params)
+
+     respond_to do |format|
+      if @application.save
+        format.html { redirect_to new_application_person_path(@application) }
+        format.json { render action: 'show', status: :created, location: @application }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @application.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
