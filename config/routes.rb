@@ -1,7 +1,8 @@
 VisionhouseRails::Application.routes.draw do
   devise_for :users
-  resources :subjects
-  resources :applications
+  resources :subjects do
+    resources :applications
+  end
 
   get '/' , to: 'view_pages#index'
 
