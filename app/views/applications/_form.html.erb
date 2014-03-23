@@ -136,8 +136,15 @@
   <div class="field">
     <%= f.label :perceived_benefit %><br>
     <%= f.text_field :perceived_benefit %>
-  </div>
+  </div><br>
   <div class="field">
+    <%= f.label :alcohol_problem %>
+    <%= f.check_box :alcohol_problem %>
+  </div><br>
+  <div class="field">
+    <%= f.label :drug_problem %>
+    <%= f.check_box :drug_problem %>
+  </div><br>
     <%= f.label :date_of_birth %><br>
     <%= f.date_field :date_of_birth %>
   </div>
