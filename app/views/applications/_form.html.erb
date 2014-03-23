@@ -177,6 +177,62 @@
 
   <!-- Health -->
   <div class="field">
+    <%= f.label :pending_charges_or_warrants %>
+    <%= f.check_box :pending_charges_or_warrants %>
+  </div><br>
+  <div class="field">
+    <%= f.label :pending_charges_or_warrants_description %><br>
+    <%= f.text_field :pending_charges_or_warrants_description %>
+  </div><br>
+  <div class="field">
+    <%= f.label :probation_or_parole %>
+    <%= f.check_box :probation_or_parole %>
+  </div><br>
+  <div class="field">
+    <%= f.label :probation_officer_first_name %><br>
+    <%= f.text_field :probation_officer_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :probation_officer_last_name %><br>
+    <%= f.text_field :probation_officer_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :probation_officer_phone %><br>
+    <%= f.number_field :probation_officer_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_doctor_name %><br>
+    <%= f.text_field :emergency_contact_doctor_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_doctor_phone %><br>
+    <%= f.number_field :emergency_contact_doctor_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_hospital_name %><br>
+    <%= f.text_field :emergency_contact_hospital_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_hospital_phone %><br>
+    <%= f.number_field :emergency_contact_hospital_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_friend_or_relative_name %><br>
+    <%= f.text_field :emergency_contact_friend_or_relative_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_friend_or_relative_phone %><br>
+    <%= f.number_field :emergency_contact_friend_or_relative_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :medical_insurance_name %><br>
+    <%= f.text_field :medical_insurance_name %>
+  </div>
+  <div class="field">
+    <%= f.label :medical_insurance_group_number %><br>
+    <%= f.number_field :medical_insurance_group_number %>
+  </div><br>
+  <div class="field">
     <%= f.label :history_serious_illness %><br>
     <%= f.text_field :history_serious_illness %>
   </div>
@@ -221,34 +277,6 @@
     <%= f.text_field :attempted_suicide_method %>
   </div><br>
   <!-- End Health -->
-
-  <!-- Criminal History -->
-  <div class="field">
-    <%= f.label :pending_charges_or_warrants %>
-    <%= f.check_box :pending_charges_or_warrants %>
-  </div><br>
-  <div class="field">
-    <%= f.label :pending_charges_or_warrants_description %><br>
-    <%= f.text_field :pending_charges_or_warrants_description %>
-  </div><br>
-  <div class="field">
-    <%= f.label :probation_or_parole %>
-    <%= f.check_box :probation_or_parole %>
-  </div><br>
-  <div class="field">
-    <%= f.label :probation_officer_first_name %><br>
-    <%= f.text_field :probation_officer_first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :probation_officer_last_name %><br>
-    <%= f.text_field :probation_officer_last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :probation_officer_phone %><br>
-    <%= f.number_field :probation_officer_phone %>
-  </div>
-  <!-- End Criminal History -->
-
   <!-- Education -->
   <div class="field">
     <%= f.label :highest_grade_completed %><br>

@@ -10,7 +10,7 @@ class FamilyMembersController < ApplicationController
 
      respond_to do |format|
       if @family_member.save
-        format.html { redirect_to new_application_child(@application) }
+        format.html { redirect_to new_application_child_path(@application) }
         format.json { render action: 'show', status: :created, location: @family_member }
       else
         format.html { render action: 'new' }
