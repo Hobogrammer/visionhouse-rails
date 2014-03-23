@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '4.0.3'
 
-gem 'better_errors'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'figaro'
 gem 'jquery-rails'
@@ -18,6 +17,12 @@ gem 'devise'
 
 group :production do
   gem 'rails_12factor'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-debugger'
 end
 
 group :doc do

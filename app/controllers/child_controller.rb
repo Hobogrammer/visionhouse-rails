@@ -6,7 +6,7 @@ class ChildController < ApplicationController
   end
 
   def create
-    @child = @application.children.create(child_params)
+    @child = @application.children.new(child_params)
   end
 
   private

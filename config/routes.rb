@@ -4,6 +4,9 @@ VisionhouseRails::Application.routes.draw do
     resources :applications
   end
 
+  resources :applications do
+    resources :children
+  end
   get '/' , to: 'view_pages#index'
 
   match 'auth/facebook/callback', to: 'sessions#create', as: 'signin', via: [:get, :post]

@@ -11,6 +11,7 @@ class ApplicationsController < ApplicationController
 
   def new
     @application = @subject.build_application
+    @child = @application.children.build
   end
 
   def edit
