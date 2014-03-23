@@ -1,4 +1,4 @@
-class FamilyMemberController < ApplicationController
+class FamilyMembersController < ApplicationController
   before_action :load_application
 
   def new
